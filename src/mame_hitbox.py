@@ -141,7 +141,8 @@ REACH_PROVENANCE: dict[str, dict[str, Any]] = {
                    "note": "table 150 = knowledge estimate; direct 114"},
 }
 
-# Standard Neo-Geo WRAM character ID to canonical name mapping (0x00 - 0x0F, 16 characters)
+# Hardware-verified Neo-Geo WRAM character ID (UID + E_CHAR) mapping (probed from live MAME 2026-11-23)
+# Note: 0x0A is reserved/Kuroko slot, so Charlotte..Mizuki occupy 0x0B..0x10.
 SS2_CHAR_ID_MAP = {
     0x00: "haowmaru",
     0x01: "nakoruru",
@@ -153,12 +154,12 @@ SS2_CHAR_ID_MAP = {
     0x07: "genan",
     0x08: "earthquake",
     0x09: "jubei",
-    0x0A: "chamcham",
-    0x0B: "sieger",
-    0x0C: "nicotine",
-    0x0D: "genjuro",
-    0x0E: "mizuki",
-    0x0F: "charlotte",
+    0x0B: "charlotte",
+    0x0C: "genjuro",
+    0x0D: "chamcham",
+    0x0E: "sieger",
+    0x0F: "nicotine",
+    0x10: "mizuki",
 }
 
 

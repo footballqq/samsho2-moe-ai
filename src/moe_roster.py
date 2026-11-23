@@ -46,7 +46,7 @@ ROSTER: List[Dict[str, Any]] = [
     },
     {
         "key": "genjuro",
-        "id": 0x0D,
+        "id": 0x0C,
         "name": "牙神幻十郎 (Genjuro)",
         "sta": "genjuro.sta",
         "desc": "宿敌剑客，三连杀与光翼刃极度凶猛",
@@ -67,7 +67,7 @@ ROSTER: List[Dict[str, Any]] = [
     },
     {
         "key": "chamcham",
-        "id": 0x0A,
+        "id": 0x0D,
         "name": "查姆查姆 (Cham Cham)",
         "sta": "chamcham.sta",
         "desc": "野性少女，巨大回旋镖与空中抓击",
@@ -81,7 +81,7 @@ ROSTER: List[Dict[str, Any]] = [
     },
     {
         "key": "sieger",
-        "id": 0x0B,
+        "id": 0x0E,
         "name": "莱因哈特 (Sieger)",
         "sta": "sieger.sta",
         "desc": "铁臂圣骑士，近身连续擒拿抱摔",
@@ -109,14 +109,14 @@ ROSTER: List[Dict[str, Any]] = [
     },
     {
         "key": "nicotine",
-        "id": 0x0C,
+        "id": 0x0F,
         "name": "花讽院和仲 (Nicotine)",
         "sta": "nicotine.sta",
         "desc": "降魔高僧，封魔符咒与长杖乱击",
     },
     {
         "key": "mizuki",
-        "id": 0x0E,
+        "id": 0x10,
         "name": "罗将神水姬 (Mizuki-Boss)",
         "sta": "mizuki.sta",
         "desc": "最终终极Boss，神魔全屏邪法与变猪术",
@@ -144,7 +144,7 @@ ROSTER: List[Dict[str, Any]] = [
     },
     {
         "key": "charlotte",
-        "id": 0x0F,
+        "id": 0x0B,
         "name": "夏洛特 (Charlotte)",
         "sta": "charlotte.sta",
         "desc": "凡尔赛西洋剑贵族，破空剑刺与三角跳跃",

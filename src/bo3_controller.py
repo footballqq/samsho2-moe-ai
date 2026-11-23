@@ -37,6 +37,7 @@ class Bo3MatchController:
         self.total_steps = 0
         self.round_winners: list[str] = []
         self._zero_streak = [0, 0]
+        self._refill_streak = 0
 
     def update(
         self,
@@ -89,6 +90,13 @@ class Bo3MatchController:
 
         if self.is_in_round:
             self.round_steps += 1
+            self._refill_streak = 0
+
+            # Physical invariant: a real round cannot legitimately end in < 25 steps (~0.8s).
+            # Guard against scene-transition black frames immediately after round start.
+            if self.round_steps < 25:
+                self._zero_streak = [0, 0]
+                return None
 
             # Require at least 3 consecutive steps (6 frames = 100ms) of sustained death
             if zs2 >= 3 and p1_alive:
@@ -132,9 +140,10 @@ class Bo3MatchController:
             self.intermission_steps += 1
 
             if not self.is_match_done:
-                # Minimum transition grace period (20 steps = 40 frames) to let KO animation clear
-                if self.intermission_steps >= 20 and p1_alive and p2_alive:
-                    # Next round is live if loser has refilled (> 0.50 bar or memory HP > 60)
+                # Physical invariant: KO slow-mo + banner takes >= 60 steps (~2s).
+                # Also require sustained refill (8 consecutive steps) so transition flickers
+                # cannot trigger a phantom Round 2 that immediately scores 0-2!
+                if self.intermission_steps >= 60 and p1_alive and p2_alive:
                     last_winner = self.round_winners[-1] if self.round_winners else None
                     if last_winner == self.p1_name:
                         loser_refilled = (r2_val > 0.50 or (p2_hp or 0) > 60)
@@ -144,13 +153,21 @@ class Bo3MatchController:
                         loser_refilled = (r1_val > 0.50 and r2_val > 0.50)
 
                     if loser_refilled:
+                        self._refill_streak += 1
+                    else:
+                        self._refill_streak = 0
+
+                    if self._refill_streak >= 8:
                         self.current_round += 1
                         self.is_in_round = True
                         self.round_just_started = True
                         self.round_steps = 0
                         self.intermission_steps = 0
                         self._zero_streak = [0, 0]
+                        self._refill_streak = 0
                         return None  # Round begins!
+                else:
+                    self._refill_streak = 0
 
             if self.intermission_steps >= self.intermission_timeout:
                 self.is_match_done = True
