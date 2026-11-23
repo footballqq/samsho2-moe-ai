@@ -192,6 +192,27 @@ New-Item -ItemType Directory -Path $DstTools -Force | Out-Null
 Copy-Item -Path (Join-Path $ProjectRoot "tools\record_match_mp4.py") -Destination $DstTools -Force
 Copy-Item -Path (Join-Path $ProjectRoot "tools\export_clean_repo.ps1") -Destination $DstTools -Force
 
+# Copy paper assets (PDFs, LaTeX/HTML sources, figure script, 300-DPI figures; exclude build aux/log)
+$SrcPaper = Join-Path $ProjectRoot "paper"
+if (Test-Path $SrcPaper) {
+    $DstPaper = Join-Path $OutputDir "paper"
+    New-Item -ItemType Directory -Path $DstPaper -Force | Out-Null
+    foreach ($pf in @("samsho2_moe_paper.pdf", "samsho2_moe_paper.tex", "samsho2_moe_paper_zh.pdf", "samsho2_moe_paper_zh.tex", "samsho2_moe_paper_zh.html", "build_paper.ps1")) {
+        $p = Join-Path $SrcPaper $pf
+        if (Test-Path $p) { Copy-Item -Path $p -Destination $DstPaper -Force }
+    }
+    $DstPaperFig = Join-Path $DstPaper "figures"
+    New-Item -ItemType Directory -Path $DstPaperFig -Force | Out-Null
+    Get-ChildItem -Path (Join-Path $SrcPaper "figures") -Filter "*.png" | ForEach-Object {
+        Copy-Item -Path $_.FullName -Destination $DstPaperFig -Force
+    }
+    $DstPaperScr = Join-Path $DstPaper "scripts"
+    New-Item -ItemType Directory -Path $DstPaperScr -Force | Out-Null
+    Get-ChildItem -Path (Join-Path $SrcPaper "scripts") -Filter "*.py" | ForEach-Object {
+        Copy-Item -Path $_.FullName -Destination $DstPaperScr -Force
+    }
+}
+
 Write-Host "`n==========================================================" -ForegroundColor Green
 Write-Host "  Export Complete! Clean Release Directory Created At:" -ForegroundColor Green
 Write-Host "  $OutputDir" -ForegroundColor Yellow

@@ -100,6 +100,14 @@ Requires **FFmpeg** available in your system `PATH`:
 
 ---
 
+## 📄 Technical Paper
+
+A complete two-column system & empirical methodology paper documenting this architecture, BUG-17/18 postmortems, and 16/16 experimental results is included under `paper/`:
+- **English PDF (6 pages, IEEE/arXiv style)**: [paper/samsho2_moe_paper.pdf](paper/samsho2_moe_paper.pdf) (LaTeX source: [samsho2_moe_paper.tex](paper/samsho2_moe_paper.tex))
+- **Chinese PDF (中文版, 4 pages)**: [paper/samsho2_moe_paper_zh.pdf](paper/samsho2_moe_paper_zh.pdf) (Source: [samsho2_moe_paper_zh.tex](paper/samsho2_moe_paper_zh.tex) / [HTML](paper/samsho2_moe_paper_zh.html))
+
+---
+
 ## 📚 Documentation (`finaldoc/en/` & `finaldoc/`)
 
 ### English Technical Documentation Suite (`finaldoc/en/`, 10/10 Complete)

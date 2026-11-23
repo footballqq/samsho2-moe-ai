@@ -99,6 +99,14 @@ pip install -r requirements.txt
 
 ---
 
+## 📄 技术论文 (Technical Paper)
+
+本项目已整理为标准双栏学术论文（含系统架构图、实机 60 FPS 画面拼图与全员 16/16 实测数据表）：
+- **中文版 PDF**：[paper/samsho2_moe_paper_zh.pdf](paper/samsho2_moe_paper_zh.pdf)（源码：[samsho2_moe_paper_zh.tex](paper/samsho2_moe_paper_zh.tex) / [HTML](paper/samsho2_moe_paper_zh.html)）
+- **English PDF**：[paper/samsho2_moe_paper.pdf](paper/samsho2_moe_paper.pdf)（LaTeX 源码：[samsho2_moe_paper.tex](paper/samsho2_moe_paper.tex)）
+
+---
+
 ## 📚 专著级技术研制与复盘文档集 (`finaldoc/`)
 
 深度技术细节、数学公式与系统工程复盘请查阅 `finaldoc/` 专著集合：
