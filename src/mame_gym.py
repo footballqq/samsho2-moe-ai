@@ -287,11 +287,13 @@ class SS2RoundEnv(gym.Env):
                  time_penalty: float = 0.0,
                  allow_spam: bool = False,
                  skip_scenes: bool | None = None,
-                 ai_role: int = 0):
+                 ai_role: int = 0,
+                 want_pixels: bool = True):
         super().__init__()
         self.instance = instance
         self.sess = sess or BridgeSession(mode="1p", instance=instance)
         self.ai_role = int(ai_role)
+        self.want_pixels = bool(want_pixels)
         self.speed = speed
         self.step_frames = step_frames
         self.max_steps = max_steps
@@ -492,14 +494,13 @@ class SS2RoundEnv(gym.Env):
                     if h2 > self._p2_base_hp:
                         self._p2_base_hp = float(h2)
 
-                # Authoritative WRAM health ratio with pixel bar safety net:
-                # Directly eliminates all pixel display lag while protecting against entity drift on round transitions.
-                if h1 == 0 and p1b > 0.02:
+                # Authoritative WRAM health ratio with pixel bar safety net (when pixels enabled):
+                if self.want_pixels and h1 == 0 and p1b > 0.02:
                     p1b_use = p1b
                 else:
                     p1b_use = min(max(float(h1) / self._p1_base_hp, 0.0), 1.0)
 
-                if h2 == 0 and p2b > 0.02:
+                if self.want_pixels and h2 == 0 and p2b > 0.02:
                     p2b_use = p2b
                 else:
                     p2b_use = min(max(float(h2) / self._p2_base_hp, 0.0), 1.0)
@@ -529,7 +530,7 @@ class SS2RoundEnv(gym.Env):
         self.sess.call("press", role=self.ai_role, mask=mask, press_frames=press,
                        wait_frames=settle)
         return self.sess.call("action", step_frames=self.step_frames,
-                              want_pixels=True)
+                              want_pixels=self.want_pixels)
 
     def _jump_mask(self) -> int:
         """R2 directional jump (review fix: the jump INTENT reuses A_JUMP;
@@ -548,7 +549,7 @@ class SS2RoundEnv(gym.Env):
             self.sess.call("press", role=0, mask=dm | bm, press_frames=pf,
                            wait_frames=gap)
         return self.sess.call("action", step_frames=max(self.step_frames, 4),
-                              want_pixels=True)
+                              want_pixels=self.want_pixels)
 
     # ----------------------------------------------------------- gym API
     def _get_state_char_id(self, state_name: str | None = None) -> int:
@@ -714,7 +715,7 @@ class SS2RoundEnv(gym.Env):
         mask = 0
         crouch_guard_active = False
         if act == A_IDLE:
-            v, frame = self.sess.call("action", step_frames=sf, want_pixels=True)
+            v, frame = self.sess.call("action", step_frames=sf, want_pixels=self.want_pixels)
         elif act in (A_WL, A_WR):
             away_act = A_WL if self._last_dx > 0 else A_WR
             away_mask = MSK_LEFT if self._last_dx > 0 else MSK_RIGHT
@@ -732,7 +733,7 @@ class SS2RoundEnv(gym.Env):
                 mask |= MSK_DOWN
                 crouch_guard_active = True
             v, frame = self.sess.call("action", dir_mask=mask, press_frames=sf,
-                                      step_frames=sf, want_pixels=True)
+                                      step_frames=sf, want_pixels=self.want_pixels)
         elif act == A_JUMP:
             mask = self._jump_mask()
             v, frame = self._tap(mask, press=6, settle=0)

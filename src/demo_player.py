@@ -299,17 +299,20 @@ def play_vs_human(target_key: str = "genjuro", human_role: int = 2):
         skip_scenes=False,
         allow_spam=False,
         ai_role=0,
+        want_pixels=False,
     )
 
     try:
         obs, info = env.reset()
+        # Let MAME's native 59.19 Hz hardware throttle pace the game smoothly (no Python sleep!)
+        env.sess.call("set", "throttle", "1")
+        env.sess.call("set", "throttle_rate", "1")
 
         if human_role == 1:
-            # Pure human 1P practice: AI sends NO inputs at all, only advances frames cleanly
+            # Pure human 1P practice: AI sends NO inputs at all, MAME runs at native 60 FPS
             print("[自由练习] 舞台已就绪！1P 完全交给你操控，AI 不会发送任何按键...\n")
             while True:
-                env.sess.call("action", dir_mask=0, btn_mask=0, press_frames=0, step_frames=2, want_pixels=False)
-                time.sleep(2.0 / 60.0)
+                env.sess.call("action", dir_mask=0, btn_mask=0, press_frames=0, step_frames=4, want_pixels=False)
 
         # human_role == 2: True 2P VS Challenger mode!
         experts_dir = PROJECT / "models" / "experts"
@@ -330,7 +333,6 @@ def play_vs_human(target_key: str = "genjuro", human_role: int = 2):
 
         while True:
             v, _ = env.sess.call("action", dir_mask=0, btn_mask=0, press_frames=0, step_frames=2, want_pixels=False)
-            time.sleep(2.0 / 60.0)
             wait_ticks += 1
 
             # After ~90 ticks (~3 seconds into character select), tap P1 A once to lock Haohmaru
@@ -378,7 +380,6 @@ def play_vs_human(target_key: str = "genjuro", human_role: int = 2):
 
             obs, reward, terminated, truncated, info = env.step(act_int)
             steps += 1
-            time.sleep(1.0 / 60.0)
 
             if steps % 60 == 0:
                 print(f"帧/步 {steps:03d} | 比分: {ctrl.score[0]}-{ctrl.score[1]} | 1P(AI 霸王丸)HP: {p1_hp:03d} | 2P(真人 {chosen_p2_key})HP: {p2_hp:03d}")
@@ -393,8 +394,7 @@ def play_vs_human(target_key: str = "genjuro", human_role: int = 2):
         hold_start = time.time()
         while time.time() - hold_start < 15.0:
             try:
-                env.sess.call("action", dir_mask=0, btn_mask=0, press_frames=0, step_frames=2, want_pixels=False)
-                time.sleep(2.0 / 60.0)
+                env.sess.call("action", dir_mask=0, btn_mask=0, press_frames=0, step_frames=4, want_pixels=False)
             except Exception:
                 break
 
