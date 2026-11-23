@@ -1,0 +1,79 @@
+{
+  "opponent": "mizuki",
+  "target_char_id": 14,
+  "savestate": "mizuki.sta",
+  "comment": "Closed-Loop Distance-Reactive Bo3 Verified Expert vs MIZUKI (2-0 in 603 steps).",
+  "round_1": {
+    "prefix": [
+      8,
+      8,
+      6,
+      3,
+      7
+    ],
+    "loop": [
+      7,
+      2,
+      3,
+      7
+    ]
+  },
+  "round_2": {
+    "type": "reactive",
+    "prefix": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "far_thresh": 0.22,
+    "far_loop": [
+      0,
+      8,
+      7
+    ],
+    "close_loop": [
+      8,
+      4,
+      3,
+      5
+    ]
+  },
+  "round_3": {
+    "type": "reactive",
+    "prefix": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "far_thresh": 0.22,
+    "far_loop": [
+      0,
+      8,
+      7
+    ],
+    "close_loop": [
+      8,
+      4,
+      3,
+      5
+    ]
+  },
+  "loop": [
+    8,
+    4,
+    3,
+    5
+  ],
+  "winning_trace": [
+    8,
+    4,
+    3,
+    5
+  ],
+  "verified_runs": "2/2",
+  "match_score": "2-0",
+  "avg_steps": 603,
+  "updated_at": "2026-11-23T12:55:00"
+}

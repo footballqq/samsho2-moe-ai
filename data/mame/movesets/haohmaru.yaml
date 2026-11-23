@@ -1,0 +1,49 @@
+# Haohmaru moveset (SS2) — macros authored FACING RIGHT; env mirrors when
+# P1 is on the right side. NeoGeo input buffer is ~10f lenient; steps 3-4f.
+# Sources: docs/战术手册.md (old port, 100% verified) + SS2 standard motions.
+# Old port needed extended motions; MAME should accept the standard ones —
+# T6 will verify and fall back to extended if a macro fails.
+
+game: samsho2
+character: haohmaru
+
+macros:
+  # —— core / verified in old port ——
+  - name: fireball          # 奥义 旋风烈斩 (projectile): qcf + A (simplified d,f+A worked on port)
+    steps: [[D, 4], [DF, 4], [R+A, 4]]
+    requires_weapon: true
+  - name: uppercut          # 奥义 弧月斩 (anti-air): dp + A
+    steps: [[R, 4], [D, 4], [DR+A, 4]]
+    requires_weapon: true
+  - name: rush              # 奥义 烈震斩 (advancing attack): dp + C
+    steps: [[R, 4], [D, 4], [DR+C, 4]]
+    requires_weapon: true
+  - name: sake              # 酒壶攻击 (drink: builds rage): qcb + A
+    steps: [[D, 4], [L, 4], [L+A, 4]]
+    requires_weapon: true
+  - name: super_tenha       # 天霸凄煌斩 (super, needs FULL rage): f,df,d,b,f + A
+    steps: [[R, 4], [DF, 4], [D, 4], [L, 4], [R+A, 4]]
+    requires_weapon: true
+    requires_rage: true
+
+  # —— basics ——
+  - name: jab               # 轻斩 A
+    steps: [[N+A, 4]]
+    requires_weapon: true
+  - name: heavy             # 重斩 C
+    steps: [[N+C, 4]]
+    requires_weapon: true
+  - name: crouch_jab        # 下段轻斩
+    steps: [[D+A, 4]]
+    requires_weapon: true
+  - name: throw_f           # 前投（近身）
+    steps: [[R+C, 4]]
+    requires_weapon: true
+
+unarmed:                    # 空手可用（武器被击飞时）
+  - name: u_jab
+    steps: [[N+A, 4]]
+  - name: u_kick
+    steps: [[N+C, 4]]
+  - name: u_slide
+    steps: [[DR+C, 4]]

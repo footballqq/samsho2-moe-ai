@@ -1,0 +1,27 @@
+{
+  "target_char_id": 9,
+  "opponent": "jubei",
+  "savestate": "jubei.sta",
+  "comment": "Complete Best-of-3 Verified Expert vs Jubei Yagyu (2-1 Victory in 866 steps).",
+  "round_1": {
+    "prefix": [],
+    "loop": [3, 3, 7],
+    "description": "Double Heavy Slash + Guard Punish Loop"
+  },
+  "round_2": {
+    "prefix": [],
+    "loop": [3, 3, 7],
+    "description": "Double Heavy Slash + Guard Punish Loop"
+  },
+  "round_3": {
+    "prefix": [],
+    "loop": [3, 3, 7],
+    "description": "Double Heavy Slash + Guard Punish Loop"
+  },
+  "loop": [3, 3, 7],
+  "winning_trace": [3, 3, 7],
+  "verified_runs": "3/3",
+  "match_score": "2-1",
+  "avg_steps": 866,
+  "updated_at": "2026-11-22T23:00:00"
+}

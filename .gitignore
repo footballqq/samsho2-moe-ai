@@ -1,0 +1,29 @@
+# Python / Virtual Environment
+.venv/
+__pycache__/
+*.py[cod]
+*.class
+
+# Runtime outputs
+logs/
+videos/
+dist/
+*.avi
+*.mp4
+*.log
+
+# Runtime MAME instances (preserve bundled 17 savestate anchors)
+data/mame/instance/*
+!data/mame/instance/rl/
+data/mame/instance/rl/*
+!data/mame/instance/rl/state/
+data/mame/instance/rl/state/*
+!data/mame/instance/rl/state/samsho2/
+data/mame/instance/rl/state/samsho2/*
+!data/mame/instance/rl/state/samsho2/*.sta
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

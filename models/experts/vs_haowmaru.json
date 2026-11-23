@@ -1,0 +1,108 @@
+{
+  "opponent": "haowmaru",
+  "target_char_id": 0,
+  "savestate": "haowmaru.sta",
+  "comment": "Complete Best-of-3 Verified Expert vs haowmaru (2-1 in 913 steps).",
+  "round_1": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": [
+      8,
+      4,
+      3,
+      5
+    ]
+  },
+  "round_2": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": [
+      8,
+      4,
+      3,
+      5
+    ]
+  },
+  "round_3": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": [
+      8,
+      4,
+      3,
+      5
+    ]
+  },
+  "loop": [
+    8,
+    4,
+    3,
+    5
+  ],
+  "winning_trace": [
+    8,
+    4,
+    3,
+    5
+  ],
+  "verified_runs": "3/3",
+  "match_score": "2-1",
+  "avg_steps": 913,
+  "updated_at": "2026-11-22T22:15:00"
+}

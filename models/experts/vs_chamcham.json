@@ -1,0 +1,54 @@
+{
+  "opponent": "chamcham",
+  "target_char_id": 13,
+  "savestate": "chamcham.sta",
+  "comment": "Complete Best-of-3 Verified Expert vs Cham Cham (2-1 Victory in 941 steps).",
+  "round_1": {
+    "prefix": [
+      8, 8, 6, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4, 3, 7,
+      7, 4, 4
+    ],
+    "loop": [
+      7, 7, 0, 3, 5
+    ]
+  },
+  "round_2": {
+    "prefix": [
+      7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+      7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+      8, 8
+    ],
+    "loop": [
+      7, 7, 0, 3, 5
+    ]
+  },
+  "round_3": {
+    "prefix": [
+      7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+      7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+      8, 8
+    ],
+    "loop": [
+      7, 7, 0, 3, 5
+    ]
+  },
+  "loop": [
+    7, 7, 0, 3, 5
+  ],
+  "winning_trace": [
+    7, 7, 0, 3, 5
+  ],
+  "verified_runs": "3/3",
+  "match_score": "2-1",
+  "avg_steps": 941,
+  "updated_at": "2026-11-22T21:50:30"
+}

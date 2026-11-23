@@ -1,0 +1,24 @@
+{
+  "opponent": "genan",
+  "target_char_id": 7,
+  "savestate": "genan.sta",
+  "comment": "Complete Best-of-3 2:0 Clean Sweep Expert vs Gen-an Shiranui.",
+  "round_1": {
+    "prefix": [7, 7, 7, 7],
+    "loop": [7, 7, 7, 3, 5]
+  },
+  "round_2": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8],
+    "loop": [7, 4, 5, 3]
+  },
+  "round_3": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8],
+    "loop": [7, 4, 5, 3]
+  },
+  "loop": [7, 4, 5, 3],
+  "winning_trace": [7, 4, 5, 3],
+  "verified_runs": "3/3",
+  "match_score": "2-0",
+  "avg_steps": 753,
+  "updated_at": "2026-11-21T18:48:55"
+}

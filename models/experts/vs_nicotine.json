@@ -1,0 +1,103 @@
+{
+  "opponent": "nicotine",
+  "target_char_id": 11,
+  "savestate": "nicotine.sta",
+  "comment": "Complete Best-of-3 Verified Expert vs nicotine (2-0 in 801 steps).",
+  "round_1": {
+    "prefix": [],
+    "loop": [
+      7,
+      3,
+      7,
+      5
+    ]
+  },
+  "round_2": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      8,
+      8
+    ],
+    "loop": [
+      7,
+      4,
+      5,
+      3
+    ]
+  },
+  "round_3": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      8,
+      8
+    ],
+    "loop": [
+      7,
+      4,
+      5,
+      3
+    ]
+  },
+  "loop": [
+    7,
+    4,
+    5,
+    3
+  ],
+  "winning_trace": [
+    7,
+    4,
+    5,
+    3
+  ],
+  "verified_runs": "3/3",
+  "match_score": "2-0",
+  "avg_steps": 801,
+  "updated_at": "2026-11-22T21:55:00"
+}

@@ -1,0 +1,75 @@
+{
+  "opponent": "sieger",
+  "target_char_id": 10,
+  "savestate": "sieger.sta",
+  "comment": "Closed-Loop Offensive Reactive Bo3 Verified Expert vs Neinhalt Sieger (2-1 in 969 steps).",
+  "round_1": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": [
+      7,
+      2,
+      3,
+      3,
+      2
+    ]
+  },
+  "round_2": {
+    "type": "reactive",
+    "prefix": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "far_thresh": 0.24,
+    "far_loop": [
+      0,
+      3,
+      7
+    ],
+    "close_loop": [
+      4,
+      3,
+      7
+    ]
+  },
+  "round_3": {
+    "type": "reactive",
+    "prefix": [
+      7,
+      7,
+      7,
+      7
+    ],
+    "far_thresh": 0.24,
+    "far_loop": [
+      0,
+      3,
+      7
+    ],
+    "close_loop": [
+      4,
+      3,
+      7
+    ]
+  },
+  "loop": [
+    4,
+    3,
+    7
+  ],
+  "winning_trace": [
+    4,
+    3,
+    7
+  ],
+  "verified_runs": "verified",
+  "match_score": "2-1",
+  "avg_steps": 969,
+  "updated_at": "2026-11-23T13:45:00"
+}

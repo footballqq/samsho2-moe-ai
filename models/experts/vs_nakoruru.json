@@ -1,0 +1,103 @@
+{
+  "opponent": "nakoruru",
+  "target_char_id": 1,
+  "savestate": "nakoruru.sta",
+  "comment": "Complete Best-of-3 Verified Expert vs nakoruru (2-0 in 824 steps).",
+  "round_1": {
+    "prefix": [],
+    "loop": [
+      7,
+      2,
+      3,
+      7
+    ]
+  },
+  "round_2": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": [
+      7,
+      2,
+      3,
+      3,
+      2
+    ]
+  },
+  "round_3": {
+    "prefix": [
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7,
+      7
+    ],
+    "loop": [
+      7,
+      2,
+      3,
+      3,
+      2
+    ]
+  },
+  "loop": [
+    7,
+    2,
+    3,
+    3,
+    2
+  ],
+  "winning_trace": [
+    7,
+    2,
+    3,
+    3,
+    2
+  ],
+  "verified_runs": "3/3",
+  "match_score": "2-0",
+  "avg_steps": 824,
+  "updated_at": "2026-11-22T22:15:00"
+}

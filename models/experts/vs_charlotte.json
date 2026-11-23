@@ -1,0 +1,25 @@
+{
+  "target_char_id": 15,
+  "opponent": "charlotte",
+  "savestate": "charlotte.sta",
+  "round_1": {
+    "prefix": [],
+    "loop": [7, 4, 5, 3],
+    "description": "Guard + Anti-Air Arc Crescent + Punish + Heavy Slash (186-step KO)"
+  },
+  "round_2": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
+    "loop": [8, 8, 6, 3, 7],
+    "description": "24-Step Guard Evade + Double Jump + Fireball Whirlwind + Heavy Slash + Guard (640-step 2-0 Clean Sweep)"
+  },
+  "round_3": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7],
+    "loop": [8, 8, 6, 3, 7],
+    "description": "24-Step Guard Evade + Double Jump + Fireball Whirlwind + Heavy Slash + Guard"
+  },
+  "metrics": {
+    "total_steps": 640,
+    "final_score": "2-0",
+    "clean_sweep": true
+  }
+}

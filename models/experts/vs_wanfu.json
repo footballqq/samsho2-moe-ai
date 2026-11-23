@@ -1,0 +1,24 @@
+{
+  "opponent": "wanfu",
+  "target_char_id": 6,
+  "savestate": "wanfu.sta",
+  "comment": "Complete Best-of-3 2:1 Expert vs Wan-fu.",
+  "round_1": {
+    "prefix": [],
+    "loop": [7, 2, 3, 3, 2]
+  },
+  "round_2": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8],
+    "loop": [7, 2, 3, 3, 2]
+  },
+  "round_3": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8],
+    "loop": [7, 2, 3, 3, 2]
+  },
+  "loop": [7, 2, 3, 3, 2],
+  "winning_trace": [7, 2, 3, 3, 2],
+  "verified_runs": "3/3",
+  "match_score": "2-1",
+  "avg_steps": 948,
+  "updated_at": "2026-11-21T21:01:15"
+}

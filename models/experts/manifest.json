@@ -1,0 +1,146 @@
+{
+  "earthquake": {
+    "target_key": "earthquake",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-1",
+    "steps": 1110,
+    "strategy": "R1: [8,8]+[3,3,7,7] (245步KO) | R2: 20步防+[8,8]+[8,3,3,7] | R3: 20步防+[3,3,7,7] (1110总步数打满三局血战大胜)",
+    "updated_at": "2026-11-22T18:55:00"
+  },
+  "genjuro": {
+    "target_key": "genjuro",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 225,
+    "strategy": "R1: [8,8]+[8,3,3,7] (225步KO, HP54) | R2/R3: 28步横幅防+[8,8]+[7,4,5,3]",
+    "updated_at": "2026-11-22T13:10:00"
+  },
+  "galford": {
+    "target_key": "galford",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 709,
+    "strategy": "R1: [8,8]+[7,4,5,3] (330步KO) | R2: 32步横幅防+[8,8]+[7,4,5,3] (709总步数完胜)",
+    "updated_at": "2026-11-21T15:48:25"
+  },
+  "nakoruru": {
+    "target_key": "nakoruru",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-1",
+    "steps": 1320,
+    "strategy": "R1: [7,2,3,7] (278步KO) | R2/R3: 24步横幅防+[7,2,3,7] (1320总步数稳胜)",
+    "updated_at": "2026-11-21T16:15:00"
+  },
+  "kyoshiro": {
+    "target_key": "kyoshiro",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 668,
+    "strategy": "R1: [8,8]+[7,4,5,3] (312步KO) | R2: 28步横幅防+[8,8]+[7,4,5,3] (668总步数完胜)",
+    "updated_at": "2026-11-21T18:22:45"
+  },
+  "genan": {
+    "target_key": "genan",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 753,
+    "strategy": "R1: 4步试探防+[7,7,7,3,5] (324步KO) | R2: 24步横幅防+[8,8]+[7,4,5,3] (753总步数完胜)",
+    "updated_at": "2026-11-21T18:48:55"
+  },
+  "nicotine": {
+    "target_key": "nicotine",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 742,
+    "strategy": "R1: [7,3,7,5] (344步KO) | R2: 28步横幅防+[8,8]+[7,4,5,3] (742总步数完胜)",
+    "updated_at": "2026-11-21T18:52:50"
+  },
+  "mizuki": {
+    "target_key": "mizuki",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-1",
+    "steps": 931,
+    "strategy": "R1: 地震先手压制+[7,2,3,7]前刺斩 (158步KO) | R2/R3: 16步防御时延+[4,3,0,5,7]对空破防追身 (931步多局大胜)",
+    "updated_at": "2026-11-22T02:26:00"
+  },
+  "hanzo": {
+    "target_key": "hanzo",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 552,
+    "strategy": "R1: [2,2]+[7,2,3,7] (206步KO) | R2: 28步横幅防+3连刺破投+[7,2,3,7] (552总步数完胜)",
+    "updated_at": "2026-11-21T20:21:45"
+  },
+  "wanfu": {
+    "target_key": "wanfu",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-1",
+    "steps": 948,
+    "strategy": "R1: [7,2,3,3,2] (204步KO) | R2/R3: 28步横幅防+[8,8]+[7,2,3,3,2] (948总步数稳胜)",
+    "updated_at": "2026-11-21T21:01:15"
+  },
+  "sieger": {
+    "target_key": "sieger",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 774,
+    "strategy": "R1: 4步格挡+[7,2,3,3,2]破防重刺 (307步KO) | R2: 32步横幅防+[7,2,3,3,2] (774总步数完胜)",
+    "updated_at": "2026-11-21T21:49:15"
+  },
+  "haowmaru": {
+    "target_key": "haowmaru",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 218,
+    "strategy": "R1: [7*8]+[8,4,3,5] (218步KO) | R2/R3: 32步防+[7,4,5,3]",
+    "updated_at": "2026-11-22T12:45:00"
+  },
+  "chamcham": {
+    "target_key": "chamcham",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 624,
+    "strategy": "R1: 53步前压变频斩+[7,7,0,3,5] (291步KO) | R2: 全局时钟顺延[7,7,0,3,5]双向反打 (624步零封完胜)",
+    "updated_at": "2026-11-22T00:15:00"
+  },
+  "ukyo": {
+    "target_key": "ukyo",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 514,
+    "strategy": "R1: 4步格挡+[0,3,5,7]突进砍反 (153步KO) | R2: [8,8,3,5,7]双起跳大劈彻底破招 (514步零封完胜)",
+    "updated_at": "2026-11-22T03:04:00"
+  },
+  "jubei": {
+    "target_key": "jubei",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 567,
+    "strategy": "R1: [7,7,0,3,5]双防逼近确反斩 (164步KO) | R2: [7,2,3,7]格挡刺击大斩压制 (567步零封完胜)",
+    "updated_at": "2026-11-22T03:28:00"
+  },
+  "charlotte": {
+    "target_key": "charlotte",
+    "status": "VERIFIED",
+    "verified_runs": "3/3",
+    "score": "2-0",
+    "steps": 640,
+    "strategy": "R1: [7,4,5,3]对空弧月斩拦截跳刺 (186步KO) | R2: 24步防守时延+[8,8,6,3,7]发波二段大劈 (640步零封完胜)",
+    "updated_at": "2026-11-22T04:19:00"
+  }
+}

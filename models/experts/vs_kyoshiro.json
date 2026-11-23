@@ -1,0 +1,24 @@
+{
+  "opponent": "kyoshiro",
+  "target_char_id": 5,
+  "savestate": "kyoshiro.sta",
+  "comment": "Complete Best-of-3 2:0 Clean Sweep Expert vs Senryo Kyoshiro.",
+  "round_1": {
+    "prefix": [8, 8],
+    "loop": [7, 4, 5, 3]
+  },
+  "round_2": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8],
+    "loop": [7, 4, 5, 3]
+  },
+  "round_3": {
+    "prefix": [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8],
+    "loop": [7, 4, 5, 3]
+  },
+  "loop": [7, 4, 5, 3],
+  "winning_trace": [7, 4, 5, 3],
+  "verified_runs": "3/3",
+  "match_score": "2-0",
+  "avg_steps": 668,
+  "updated_at": "2026-11-21T18:22:45"
+}

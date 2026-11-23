@@ -1,0 +1,19 @@
+# Samurai Shodown II - Deep Reinforcement Learning Agent Dependencies
+# Recommended Python: 3.10 ~ 3.13 (64-bit)
+
+# 1. PyTorch (Install the build matching your hardware first):
+# For CUDA 12.8 (Recommended if you have NVIDIA GPU):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+# For CPU only (Lightweight, sufficient for watching or CPU training):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# 2. Reinforcement Learning Stack
+stable-baselines3>=2.3.0,<=2.9.2
+gymnasium>=1.0.0,<=1.4.0
+sb3-contrib>=2.3.0,<=2.9.2
+tensorboard>=2.15.0
+
+# 3. Scientific Computing & Utilities
+numpy>=1.26.0
+pillow>=10.0.0
+pyyaml>=6.0.0
